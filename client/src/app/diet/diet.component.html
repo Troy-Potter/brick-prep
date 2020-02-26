@@ -1,0 +1,30 @@
+<mat-list>
+    <h2 mat-display-1 style="margin-left: 25%; padding-left: 15px; text-decoration: underline;">Select Diet Type!</h2>
+    <mat-radio-group
+    class="diet-radio-group"
+    [(ngModel)]='diet'>
+    <mat-list-item *ngFor='let type of diets'>
+        <mat-radio-button [value]='type'>{{type}}</mat-radio-button>
+      <mat-icon mat-list-icon></mat-icon>
+    </mat-list-item> 
+    </mat-radio-group>
+
+    
+
+    <h2 mat-display-1 style="margin-left: 25%; margin-top: 2%;padding-left: 15px; text-decoration: underline;">Any Allergies?</h2>
+    <mat-list class="allergy-group">
+        <mat-list-item class="allergy-list-item">
+            <mat-checkbox [(ngModel)]="nuts"> Nuts </mat-checkbox>
+        </mat-list-item> 
+        <mat-list-item class="allergy-list-item">
+            <mat-checkbox [(ngModel)]="soy"> Soy </mat-checkbox>
+        </mat-list-item> 
+        <mat-list-item class="allergy-list-item">
+            <mat-checkbox [(ngModel)]="shellfish"> Shellfish </mat-checkbox>
+        </mat-list-item> 
+
+  </mat-list>
+  </mat-list>
+<br>
+
+  <button (click)="subscriptionPage()" [disabled]='isValid()' mat-raised-button color="primary" style="margin-left: 25%">Select Store</button> 

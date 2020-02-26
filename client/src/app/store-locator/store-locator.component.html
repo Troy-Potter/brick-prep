@@ -1,0 +1,22 @@
+<div id="map"
+    class="map">
+</div>
+<mat-card>
+    <mat-card-title style="margin-left: 25%;">
+        Choose a store!
+    </mat-card-title>
+    <mat-card-content style="text-align: center; ">
+        <div *ngIf="store">  
+        {{this.store.name}}
+        <br>
+        {{this.store.address.street}}
+        <br>
+        {{this.store.address.city}}
+        <br>
+        <div>{{this.store.address.country}} {{this.store.address.zip}} </div>
+
+            <button (click)="dietPage()" mat-raised-button color="primary">Select Store</button> 
+        </div>
+
+    </mat-card-content> 
+</mat-card>

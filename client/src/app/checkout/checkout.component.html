@@ -1,0 +1,28 @@
+
+<h1 style="margin-left: 25%; padding-left: 15px; ">Thank you for your order</h1>
+ 
+<mat-grid-list cols="4" >
+    <mat-grid-tile *ngFor="let food of food">
+        <mat-card>
+                <img mat-card-image src="{{food.Pic}}"  height="300px">
+                <mat-card-content mat-display-1>
+                    {{food.Name}}
+                </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+
+<div *ngIf="type == 'pickup' && address" style="margin-left: 25%;">
+    <h2 mat-display-1>Pickup at the store:</h2>
+    <div body-1>
+        {{this.address.street}}
+        <br>
+        {{this.address.city}}
+        <br>  
+        <div>{{this.address.country}} {{this.address.zip}} </div>
+    </div>
+
+</div>
