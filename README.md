@@ -2,10 +2,10 @@
 Using Wegman's API our team decided to create a way for customers to make a subscription box. This subscription box could be delivered or picked-up in store. If the box was being picked-up they could choose to add alcohol, which would take the least selling beer from the API and include it.  
 
 Used MEAN stack. 
-MongoDB Atlas 
-Express 
-Angular JS
-Node JS
+(MongoDB Atlas, 
+Express, 
+Angular JS, and
+Node JS)
 
 
 To Run:
